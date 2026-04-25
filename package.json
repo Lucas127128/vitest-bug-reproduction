@@ -5,7 +5,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@tanstack/store": "^0.11.0"
+    "@tanstack/store": "^0.11.0",
+    "@types/node": "^25.6.0"
   },
   "devDependencies": {
     "vitest": "^4.1.5"

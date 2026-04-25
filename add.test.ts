@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import dataJson from "./data.json" with { type: "json" };
-import { addToData, data, type Data } from "./add.ts";
+import { addToData, data } from "./add.ts";
 import fs from "node:fs";
 
 beforeEach(() => {
@@ -9,7 +9,7 @@ beforeEach(() => {
 
 describe("push", () => {
   it("add a new item to sampleAtom", () => {
-    addToData({ ...dataJson[0], quantity: 2 } as Data);
+    addToData({ ...dataJson[0], quantity: 2 });
     expect(data.get()[0]?.quantity).toBe(2);
   });
   it("doesn't modify dataJson", () => {
