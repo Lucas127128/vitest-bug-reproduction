@@ -7,8 +7,8 @@ beforeEach(() => {
   data.set(dataJson.slice(0, 2));
 });
 
-describe("push", () => {
-  it("add a new item to sampleAtom", () => {
+describe("addToData", () => {
+  it("change quantity of data", () => {
     addToData({ ...dataJson[0], quantity: 2 });
     expect(data.get()[0]?.quantity).toBe(2);
   });
