@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import dataJson from "../data/data.json" with { type: "json" };
-import { addToData, data, type Data } from "../src/add.ts";
+import dataJson from "./data.json" with { type: "json" };
+import { addToData, data, type Data } from "./add.ts";
 import fs from "node:fs";
 
 beforeEach(() => {
@@ -13,7 +13,7 @@ describe("push", () => {
     expect(data.get()[0]?.quantity).toBe(2);
   });
   it("doesn't modify dataJson", () => {
-    const realDataJson = JSON.parse(fs.readFileSync("./data/data.json", "utf-8"));
+    const realDataJson = JSON.parse(fs.readFileSync("./data.json", "utf-8"));
     expect(dataJson).toEqual(realDataJson);
   });
 });
